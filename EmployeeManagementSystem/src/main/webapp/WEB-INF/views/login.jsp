@@ -12,11 +12,9 @@
 <body ng-controller="ValidController">
   <div ng-show="showAttendanceForm">
 	<div id="mainDiv">
-         <!--  <div id="logoDiv"><img src="images/welcome.jpg" id="logo"></div> -->
 		<form id="logForm" name="myForm" ng-submit="redirect(empId)"
 			method="post" novalidate align="center">
-
-
+			
 			<div id="enterMsgDiv">
 				<p id="enter" ng-model="employeeIdLength">Enter Employee ID</p>
 			</div>
@@ -54,31 +52,14 @@
 			<Button id="AdminButton" ng-click="AdminButton()">Admin
 				sign-in</Button>
 		</div>
-		all empIds:
+		<!-- all empIds:
 		<p>{{jsondata}}</p>
 		Loggedin empIds :
 		<p>{{loggedInIds}}</p>
 		LoggedOut empIds :
-		<p>{{jsonLoggedOut}}</p>
+		<p>{{jsonLoggedOut}}</p> -->
 	</div>
 </div>
-	
-	<div id="AdminFormDiv" ng-hide="showAttendanceForm">
-	
-	     <div id="headingDiv"><P id="adminHeading">Admin Login</P></div>   
-	
-	    <form id="adminSignInForm">
-	        
-	        <input type="text" id="adminIdText" autocomplete="off" ng-model="adminId" placeHolder="Enter Admin Id"/><br>
-	        <input type="password" id="adminPassText" autocomplete="off" ng-model="adminPassword" placeholder="Enter Admin Password"/><br>
-	        <input type="submit" id="submitButton" value="Login" ng-click="redirectToAdminHome()" /><input type="reset" id="resetButton" value="reset" />    
-	        
-	    </form>
-	  <div ><p id="adminInvalidmsg">{{adminInvalidMsg}}</p><div>
-	  <div><a href="forgotPassword">forgot password</a></div>
-	</div>
-
-
 </body>
 
 </html>

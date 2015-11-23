@@ -46,9 +46,9 @@
          <div id="importEmployeeDataDiv">
               <p id="AddEmpText" >Add Employee(s)</p>              
               <Button id="excelbutton" ng-click="showFromExcelDiv()">From Excel File</Button>
-              <Button id="manualButton" ng-click="showAddEmployeeDiv()">By Single User</Button>
-                
+              <Button id="manualButton" ng-click="showAddEmployeeDiv()">By Single User</Button>       
         </div>
+        
         <div id="fromExcelDiv" ng-show="showExcelDiv">
         
               <p id="excelDivText">Select Excel File Location</p>
@@ -56,6 +56,7 @@
               <button id="uploadButton" ng-click="uploadFile()">Upload</button>
               <p id="EmployeeSuccessMsg">{{fileUploadSuccessMsg}}</p>
         </div>
+        
          <div id="ManuallyEnterDiv" ng-show="showManuallyEnterDiv">
              <p id="excelDivText">Enter Employee Details</p>
              <form id="addEmployeeForm">
