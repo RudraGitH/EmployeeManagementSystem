@@ -29,6 +29,7 @@
                   <h2>Forgot your password?</h2>
             </div>
            
+           
             <div id="div4">
                    <form  name="myForm" ng-submit="getPassword()" novalidate>
                    <p>please enter your email and we'll send reset password page link to your email.you can reset your password</p>
