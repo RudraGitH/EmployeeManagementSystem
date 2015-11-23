@@ -29,6 +29,7 @@ public class AttendanceController {
 		
 		return "login";
 		
+		
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
