@@ -16,6 +16,7 @@
 		<form id="logForm" name="myForm" ng-submit="redirect(empId)"
 			method="post" novalidate align="center">
 
+
 			<div id="enterMsgDiv">
 				<p id="enter" ng-model="employeeIdLength">Enter Employee ID</p>
 			</div>

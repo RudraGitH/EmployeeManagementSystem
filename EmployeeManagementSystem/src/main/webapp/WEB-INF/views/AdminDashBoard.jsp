@@ -60,6 +60,7 @@
              <p id="excelDivText">Enter Employee Details</p>
              <form id="addEmployeeForm">
              
+             
                  <label id="empText">Employee Id:</label><br><input type="text" id="empTextBox" autocomplete="off" ng-model="empId" required><span id="star">*</span><br>
                  <label id="empText">First Name:</label><br><input type="text" id="empTextBox" ng-model="empFirstName" required><span id="star">*</span><br>
                  <label id="empText">Last Name:</label><br><input type="text" id="empTextBox" ng-model="empLastName" required><span id="star">*</span><br>
