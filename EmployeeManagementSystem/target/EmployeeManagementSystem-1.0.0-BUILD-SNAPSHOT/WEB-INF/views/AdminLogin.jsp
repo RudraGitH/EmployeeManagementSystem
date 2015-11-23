@@ -51,7 +51,7 @@
 							<td align="left"><input type="checkbox"
 								ng-model="showPassword" ng-click="showPass()">Show
 								password</td>
-							<td><a href="">forgot Passwowrd ?</a></td>
+							<td><a href="" ng-click="forgotPassword()">forgot Passwowrd ? </a></td>
 						</tr>
 
 						<tr>
