@@ -45,7 +45,6 @@ public class ParentConfigBean {
 		return dataSource;
 	}
 	
-	
 	@Bean(name="sessionFactory")
 	public LocalSessionFactoryBean getSessionFactory() throws Exception{
 		
