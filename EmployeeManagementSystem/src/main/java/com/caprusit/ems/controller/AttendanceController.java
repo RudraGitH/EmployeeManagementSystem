@@ -21,6 +21,7 @@ public class AttendanceController {
 	
 	private static Logger logger=Logger.getLogger(AttendanceController.class);
 	
+	
 	@RequestMapping(method = RequestMethod.GET)
 	public String init(ModelMap modelMap) {
 
