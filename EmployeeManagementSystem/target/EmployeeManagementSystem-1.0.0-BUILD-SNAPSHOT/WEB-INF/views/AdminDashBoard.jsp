@@ -2,6 +2,7 @@
 <html ng-app="AdminDashBoard">
 <head>
 
+
 <script type="text/javascript" src="angularJs/angular.js"></script>
 <script type="text/javascript" src="js/AdminDashBoard.js"></script>
 <link rel="stylesheet" href="css/ADminDashBoard.css">
@@ -46,9 +47,9 @@
          <div id="importEmployeeDataDiv">
               <p id="AddEmpText" >Add Employee(s)</p>              
               <Button id="excelbutton" ng-click="showFromExcelDiv()">From Excel File</Button>
-              <Button id="manualButton" ng-click="showAddEmployeeDiv()">By Single User</Button>
-                
+              <Button id="manualButton" ng-click="showAddEmployeeDiv()">By Single User</Button>       
         </div>
+        
         <div id="fromExcelDiv" ng-show="showExcelDiv">
         
               <p id="excelDivText">Select Excel File Location</p>
@@ -56,9 +57,11 @@
               <button id="uploadButton" ng-click="uploadFile()">Upload</button>
               <p id="EmployeeSuccessMsg">{{fileUploadSuccessMsg}}</p>
         </div>
+        
          <div id="ManuallyEnterDiv" ng-show="showManuallyEnterDiv">
              <p id="excelDivText">Enter Employee Details</p>
              <form id="addEmployeeForm">
+             
              
                  <label id="empText">Employee Id:</label><br><input type="text" id="empTextBox" autocomplete="off" ng-model="empId" required><span id="star">*</span><br>
                  <label id="empText">First Name:</label><br><input type="text" id="empTextBox" ng-model="empFirstName" required><span id="star">*</span><br>

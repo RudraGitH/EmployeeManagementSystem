@@ -2,6 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <html ng-app="myApp">
 <head>
+
 <title>Attendance Page</title>
 <script src="angularJs/angular.js"></script>
 <link rel="stylesheet" type="text/css" href="css/alert.css">
