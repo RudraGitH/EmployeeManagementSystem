@@ -45,7 +45,7 @@ public class ValidationServiceImpl implements ValidationService {
 		logger.info("inside ValidationServiceImpl getLoggedInEmoloyeeIds()");
 
 		List<Object> loggedInList = validationDAO.getLoggedInEmployeeIds();
-		System.out.println("list size loggedinemp" + loggedInList.size());
+		logger.info("list size loggedinemp" + loggedInList.size());
 
 		return convertToJson(loggedInList);
 	}
@@ -55,10 +55,17 @@ public class ValidationServiceImpl implements ValidationService {
 		logger.info("inside ValidationServiceImpl getLoggedOutEmployeeIds()");
 
 		List<Object> loggedOutList = validationDAO.getLoggedOutEmoloyeeIds();
-		System.out.println("list size logged out emp" + loggedOutList.size());
+		logger.info("list size logged out emp" + loggedOutList.size());
 
 		return convertToJson(loggedOutList);
 		
+	}
+	
+	public String getEmployees() {
+		
+		logger.info("inside ValidationServiceImpl getEmployees()");
+		List<Object> employeeList = validationDAO.getEmployees();
+		return convertToJson(employeeList);
 	}
 
 	public static String convertToJson(Object obj) {
@@ -67,5 +74,7 @@ public class ValidationServiceImpl implements ValidationService {
 		return gson.toJson(obj);
 
 	}
+
+	
 
 }

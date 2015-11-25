@@ -9,5 +9,6 @@ public interface ValidationDAO {
 	public List<Object> getAllEmploeeIds(); 
 	public List<Object> getLoggedInEmployeeIds(); 
 	public List<Object> getLoggedOutEmoloyeeIds();
+	public List<Object>  getEmployees();
 
 }

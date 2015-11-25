@@ -8,6 +8,19 @@
 <link rel="stylesheet" href="css/ADminDashBoard.css">
 <link rel="stylesheet" href="css/Admin_addEmployeeDetails.css">
 <title>Admin Dash Board</title>
+<style type="text/css">
+
+table, td, th {
+    border: 1px solid green;
+}
+
+th {
+    background-color: green;
+    color: white;
+}
+</style>
+
+
 </head>
 
 <body ng-controller="AdminDashBoardController">
@@ -21,7 +34,7 @@
    <nav id="nav1">
    <ul id="manageUserList">
     <a href="" ng-click="addEmployeeDetails()">Add Employee</a><br><br>
-    <a href="" ng-click="hi()">view user</a>
+    <a href="" ng-click="viewUser()">View User</a>
    </ul>
    </nav>
   </li>
@@ -76,6 +89,38 @@
              </form>
              <span id="EmployeeSuccessMsg">{{addEmployeeSuccessMsg}}</span></div>
         </div>
+<div id="section" ng-show="viewUserDetails">
+
+	
+		<p>User Data</p>
+		
+		<table>
+			<th>Employee Id</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Date Of Birth</th>
+			<th>mobile No</th>
+			<th>Email Id</th>
+			<th>Designation</th>
+			<th>Role Id</th>
+			<th>Status</th>
+			<th>Dept. Id</th>
+		<tr ng-repeat="emp in allEmpData">
+			<td>{{emp.employeeId}}</td>
+			<td>{{emp.firstName}}</td>
+			<td>{{emp.lastName}}</td>
+			<td>{{emp.dob}}</td>
+			<td>{{emp.mobileNo}}</td>
+			<td> {{emp.emailId}}</td>
+			<td>{{emp.designation}} </td>
+			<td> {{emp.rollId}}</td>
+			<td> {{emp.status}} </td>
+			<td> {{emp.deptId}} </td>
+		</tr> 
+		</table> 
+	
+	
+</div>
         <p>{{adminStatus}}</p>
 <!-- <center>SingleUser<input type="RADIO" name="userChoice" id="navRadio01" onclick="window.location='file:///D:/Testings/SingleUserTest.html'"> &nbsp; &nbsp;
  Through Excel<input type="RADIO" name="userChoice" id="navRadio01" onclick="window.location='file:///D:/Testings/ThroughExcelTest.html'"> -->

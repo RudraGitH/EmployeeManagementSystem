@@ -43,6 +43,11 @@ public class ValidationController {
 		return validationservice.getLoggedOutEmployeeIds();
 		
 	}
+	@RequestMapping(value="/getAllEmployee",method=RequestMethod.GET)
+	public @ResponseBody String getAllEmployee(){
+		logger.info("inside validationController getAllEmployee()");	
+		return validationservice.getEmployees();
+	}
 	
 
 }

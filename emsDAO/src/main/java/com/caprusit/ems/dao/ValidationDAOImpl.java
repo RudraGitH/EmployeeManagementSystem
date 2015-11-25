@@ -6,6 +6,8 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
+import org.hibernate.Query;
+import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Criterion;
@@ -114,6 +116,28 @@ public class ValidationDAOImpl implements ValidationDAO {
 
 		return loggedInList;
 		
+	}
+
+
+	public List<Object> getEmployees() {
+		Session session = sessionFactory.openSession();
+		
+		/*String sql="select e.employeeid,e.firstname,e.lastname,e.dob,e.mobileno,e.emailid,e.designation,r.roletype,e.status,d.deptname"
+				+ " from employee_table e ,role_table r,department_table d"
+				+ "where e.roleid=r.roleid and e.deptid=d.deptid";*/
+		
+		
+		String sql = "SELECT * FROM EMPLOYEE_TABLE";
+		SQLQuery query = session.createSQLQuery(sql);
+		query.addEntity(Employee.class);
+		
+		@SuppressWarnings("unchecked")
+		List<Object> results = query.list();
+		
+		
+		
+		session.close();
+		return results;
 	}
 
 }

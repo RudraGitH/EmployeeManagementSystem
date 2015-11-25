@@ -15,14 +15,13 @@
  <div id="header">
   <h1>Admin Dashboard</h1>
  </div>
-
  <div id="nav">
   <li>
   Manage Employee
    <nav id="nav1">
    <ul id="manageUserList">
     <a href="" ng-click="addEmployeeDetails()">Add Employee</a><br><br>
-    <a href="" ng-click="hi()">view user</a>
+    <a href="" ng-click="viewUser()">View User</a>
    </ul>
    </nav>
   </li>
@@ -77,6 +76,14 @@
              </form>
              <span id="EmployeeSuccessMsg">{{addEmployeeSuccessMsg}}</span></div>
         </div>
+<div id="section" ng-show="viewUserDetails">
+
+	<div>
+		<p>User Data</p>
+		<p>{{userData}}</p>
+	</div>
+	
+</div>
         <p>{{adminStatus}}</p>
 <!-- <center>SingleUser<input type="RADIO" name="userChoice" id="navRadio01" onclick="window.location='file:///D:/Testings/SingleUserTest.html'"> &nbsp; &nbsp;
  Through Excel<input type="RADIO" name="userChoice" id="navRadio01" onclick="window.location='file:///D:/Testings/ThroughExcelTest.html'"> -->

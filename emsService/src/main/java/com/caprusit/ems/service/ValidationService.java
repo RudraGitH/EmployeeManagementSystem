@@ -5,5 +5,6 @@ public interface ValidationService {
 	public String getAllEmployeeIds();
 	public String getLoggedInEmoloyeeIds();
 	public String getLoggedOutEmployeeIds();
+	public String getEmployees();
  
 }
